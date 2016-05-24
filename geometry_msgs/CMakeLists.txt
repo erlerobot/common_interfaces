@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8.3)
 
 project(geometry_msgs)
 
@@ -20,11 +20,11 @@ set(msg_files
   # "msg/PointStamped.msg"
   # "msg/Polygon.msg"
   # "msg/PolygonStamped.msg"
-  "msg/Pose.msg"
+   "msg/Pose.msg"
   # "msg/Pose2D.msg"
   # "msg/PoseArray.msg"
-  "msg/PoseStamped.msg"
-  "msg/PoseWithCovariance.msg"
+  # "msg/PoseStamped.msg"
+   "msg/PoseWithCovariance.msg"
   # "msg/PoseWithCovarianceStamped.msg"
   "msg/Quaternion.msg"
   # "msg/QuaternionStamped.msg"
@@ -32,7 +32,7 @@ set(msg_files
   "msg/TransformStamped.msg"
   "msg/Twist.msg"
   # "msg/TwistStamped.msg"
-  "msg/TwistWithCovariance.msg"
+   "msg/TwistWithCovariance.msg"
   # "msg/TwistWithCovarianceStamped.msg"
   "msg/Vector3.msg"
   # "msg/Vector3Stamped.msg"
@@ -44,7 +44,5 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   DEPENDENCIES std_msgs
   ADD_LINTER_TESTS
 )
-
-ament_export_dependencies(rosidl_default_runtime)
 
 ament_package()
