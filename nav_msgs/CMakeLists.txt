@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8.3)
 
 project(nav_msgs)
 
@@ -13,15 +13,15 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 
 set(msg_files
-  #"msg/GridCells.msg"
-  #"msg/MapMetaData.msg"
-  #"msg/OccupancyGrid.msg"
+#  "msg/GridCells.msg"
+#  "msg/MapMetaData.msg"
+#  "msg/OccupancyGrid.msg"
   "msg/Odometry.msg"
-  #"msg/Path.msg"
+#  "msg/Path.msg"
 )
 set(srv_files
-  #"srv/GetMap.srv"
-  #"srv/GetPlan.srv"
+#  "srv/GetMap.srv"
+#  "srv/GetPlan.srv"
 )
 # TODO(wjwwood): port the action GetMap from ROS 1, once actions are supported.
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -30,7 +30,5 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   DEPENDENCIES builtin_interfaces geometry_msgs std_msgs
   ADD_LINTER_TESTS
 )
-
-ament_export_dependencies(rosidl_default_runtime)
 
 ament_package()
